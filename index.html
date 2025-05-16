@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>From Zero To One</title>
     <link rel="stylesheet" href="styles.css">
-
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
-<body>
+
+<body class="text-gray-800">
+    <!-- Background Particles -->
+    <div id="particles-container" class="fixed inset-0 overflow-hidden z-0"></div>
     <nav>
-        <div class="logo">ZERO</div>
+        <img class="logo" src="Images/Logo.png" alt="Zero">
         <div class="nav-links">
             <a href="#">Explore</a>
             <a href="#">For Startups</a>
@@ -27,7 +29,7 @@
         <div class="hero-text">
             <div class="heading-wrapper">
                 <h1>
-                    <span class="gradient-text">From</span>  <span id="typed" class="gradient-text"></span>
+                    <span class="gradient-text">From</span>  <span id="typed" class="gradient-text"></span>
                 </h1>
             </div>
             <p class="static-paragraph">The next-generation platform connecting <br> startups with strategic investors. </p>
@@ -39,8 +41,111 @@
         <div class="hero-image"></div>
     </section>
 
-    <script src="animation.js"></script>
+    <section class="impact">
+        <h2>Our Impact in Numbers</h2>
+        <p class="impact-description">Connecting innovative startups with visionary investors to create meaningful impact.</p>
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-number" data-target="10987">0</span>
+                <p>Startups Registered</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-target="5987">0</span>
+                <p>Investor Onboarded</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number" data-target="18987">0</span>
+                <p>Funds Raised</p>
+            </div>
+        </div>
+    </section>
 
-    
+    <section class="startups">
+        <h2>Our Startups</h2>
+        <p class="startups-description">Discover the innovative startups shaping the future with groundbreaking ideas.</p>
+        <div class="carousel-wrapper">
+            <div class="carousel">
+                <!-- Startup Cards -->
+                <div class="startup-card">
+                    <div class="icon">AI</div>
+                    <h3>NeuralSync</h3>
+                    <p>AI-driven neural networks for real-time data processing.</p>
+                    <button>Learn More →</button>
+                </div>
+                <div class="startup-card">
+                    <div class="icon">ECO</div>
+                    <h3>EcoSphere</h3>
+                    <p>Sustainable energy solutions using biodegradable materials.</p>
+                    <button>Learn More →</button>
+                </div>
+                <div class="startup-card">
+                    <div class="icon">MED</div>
+                    <h3>HealthWave</h3>
+                    <p>AI-powered diagnostics for early disease detection.</p>
+                    <button>Learn More →</button>
+                </div>
+                <div class="startup-card">
+                    <div class="icon">EDU</div>
+                    <h3>SmartLearn</h3>
+                    <p>Adaptive learning platform for personalized education.</p>
+                    <button>Learn More →</button>
+                </div>
+                <div class="startup-card">
+                    <div class="icon">FIN</div>
+                    <h3>FinChain</h3>
+                    <p>Blockchain-based financial services for secure transactions.</p>
+                    <button>Learn More →</button>
+                </div>
+                <div class="startup-card">
+                    <div class="icon">ROB</div>
+                    <h3>RoboCore</h3>
+                    <p>Advanced robotics for industrial automation.</p>
+                    <button>Learn More →</button>
+                </div>
+                <!-- Duplicate Cards for Seamless Looping -->
+                <div class="startup-card">
+                    <div class="icon">AI</div>
+                    <h3>NeuralSync</h3>
+                    <p>AI-driven neural networks for real-time data processing.</p>
+                    <button>Learn More →</button>
+                </div>
+                <div class="startup-card">
+                    <div class="icon">ECO</div>
+                    <h3>EcoSphere</h3>
+                    <p>Sustainable energy solutions using biodegradable materials.</p>
+                    <button>Learn More →</button>
+                </div>
+                <div class="startup-card">
+                    <div class="icon">MED</div>
+                    <h3>HealthWave</h3>
+                    <p>AI-powered diagnostics for early disease detection.</p>
+                    <button>Learn More →</button>
+                </div>
+                <div class="startup-card">
+                    <div class="icon">EDU</div>
+                    <h3>SmartLearn</h3>
+                    <p>Adaptive learning platform for personalized education.</p>
+                    <button>Learn More →</button>
+                </div>
+                <div class="startup-card">
+                    <div class="icon">FIN</div>
+                    <h3>FinChain</h3>
+                    <p>Blockchain-based financial services for secure transactions.</p>
+                    <button>Learn More →</button>
+                </div>
+                <div class="startup-card">
+                    <div class="icon">ROB</div>
+                    <h3>RoboCore</h3>
+                    <p>Advanced robotics for industrial automation.</p>
+                    <button>Learn More →</button>
+                </div>
+            </div>
+        </div>
+        <footer style="padding: 40px; background: #263149; margin: 40px; border-radius: 20px;">
+    <p>Footer Content</p>
+</footer>
+    </section>
+
+    <script src="animation.js"></script>
 </body>
 </html>

@@ -1,12 +1,89 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Typed.js animation for the heading
+    var typed = new Typed('#typed', {
+        strings: ["Zero<br>to One", "Ideas<br>to Reality", "Startups<br>to Success"],
+        typeSpeed: 90,
+        backSpeed: 60,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|',
+        autoInsertCss: true
+    });
 
-        document.addEventListener('DOMContentLoaded', function() {
-            var typed = new Typed('#typed', {
-                strings: ["Zero<br>to One", "Ideas<br>to Reality", "Startups<br>to Success"],
-                typeSpeed: 90,
-                backSpeed: 60,
-                loop: true,
-                showCursor: true,
-                cursorChar: '|',
-                autoInsertCss: true
+    // Smooth counting animation for the stats
+    const counters = document.querySelectorAll('.stat-number');
+    const duration = 3000; // Duration of the animation in milliseconds (3 seconds)
+
+    counters.forEach(counter => {
+        const updateCount = (timestamp) => {
+            if (!counter.startTime) counter.startTime = timestamp;
+            const progress = Math.min((timestamp - counter.startTime) / duration, 1);
+            const target = +counter.getAttribute('data-target');
+            const current = Math.floor(progress * target);
+            
+            if (progress < 1) {
+                counter.innerText = current.toLocaleString() + '+';
+                // Subtle bounce effect with a slight scale increase
+                const bounce = Math.sin(progress * Math.PI) * 0.1;
+                counter.style.transform = `scale(${1 + bounce})`;
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerText = target.toLocaleString() + '+';
+                counter.style.transform = 'scale(1)';
+            }
+        };
+
+        // Trigger the animation when the counter comes into view
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    requestAnimationFrame(updateCount);
+                    observer.unobserve(entry.target); // Stop observing once animation starts
+                }
             });
-        });
+        }, { threshold: 0.5 });
+
+        observer.observe(counter);
+    });
+
+    // Particle animation
+    function createParticles() {
+        const container = document.getElementById('particles-container');
+        const particleCount = 10; // Reduced number of particles
+        const colors = [
+            'hsl(0, 0%, 100%)', // White
+            'hsl(0, 0%, 90%)', // Light grey
+            'hsl(0, 0%, 80%)', // Medium grey
+            'hsl(0, 0%, 70%)'  // Darker grey
+        ];
+
+        function spawnParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = `${Math.random() * 100}%`; // Random horizontal position
+            particle.style.bottom = `0`; // Start from the bottom of the page
+            particle.style.background = colors[Math.floor(Math.random() * colors.length)]; // Random white/grey color
+            // Add custom properties for animation variation
+            particle.style.setProperty('--x-offset', `${(Math.random() - 0.5) * 50}px`); // Horizontal drift
+            particle.style.setProperty('--y-offset', `${Math.random() * -50}px`); // Slight vertical variation
+            particle.style.animationDelay = `${Math.random() * 2}s`;
+            container.appendChild(particle);
+
+            // Remove particle after animation ends
+            particle.addEventListener('animationend', () => {
+                particle.remove();
+            });
+        }
+
+        // Create initial particles
+        for (let i = 0; i < particleCount; i++) {
+            spawnParticle();
+        }
+
+        // Spawn new particles less frequently
+        setInterval(spawnParticle, 500); // Every 500ms
+    }
+
+    // Initialize particles
+    createParticles();
+});

@@ -10,17 +10,73 @@ body {
     color: #fff;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #263149;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #026181, #09BBF9);
+    border-radius: 10px;
+    border: 2px solid #263149;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #09BBF9, #026181);
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    animation: float 8s infinite linear;
+    pointer-events: none;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes float {
+    0% {
+        transform: translate(calc(var(--x-offset)), 0);
+        opacity: 0.5;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(calc(var(--x-offset)), calc(-100vh + var(--y-offset)));
+        opacity: 0;
+    }
+}
+
+#particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure particles stay in the background */
+    pointer-events: none;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background-color: #263149;
+    z-index: 1; /* Above particles */
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    max-width: 150px;
 }
 
 .nav-links {
@@ -39,14 +95,14 @@ nav {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 90px; 
+    font-size: 90px;
     line-height: 1.2;
     max-width: 100%;
 }
 
 .typed-cursor {
     color: #ffffff;
-    font-size: 5rem; 
+    font-size: 5rem;
 }
 
 .auth-buttons {
@@ -81,6 +137,7 @@ nav {
     position: relative;
     overflow: hidden;
     border: 1px solid #fff;
+    z-index: 1; /* Above particles */
 }
 
 .hero-text {
@@ -90,7 +147,7 @@ nav {
 }
 
 .heading-wrapper {
-    height: 220px; 
+    height: 220px;
     overflow: hidden;
 }
 
@@ -99,22 +156,22 @@ nav {
 }
 
 .static-paragraph {
-    font-size: 32px; 
+    font-size: 32px;
     margin-bottom: 30px;
     position: relative;
 }
 
 .buttons {
     display: flex;
-    gap: 30px; 
+    gap: 30px;
     position: relative;
     z-index: 1;
 }
 
 .buttons button {
-    padding: 16px 40px; 
-    border-radius: 30px; 
-    font-size: 20px; 
+    padding: 16px 40px;
+    border-radius: 30px;
+    font-size: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -141,4 +198,149 @@ nav {
     width: 50%;
     background: url('Images/Wolfu.gif') no-repeat center;
     background-size: cover;
+}
+
+/* Impact Section Styles */
+.impact {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #e6f0fa;
+    border-radius: 20px;
+    margin: 40px;
+    z-index: 1; /* Above particles */
+}
+
+.impact h2 {
+    font-size: 48px;
+    color: #026181;
+    margin-bottom: 20px;
+}
+
+.impact-description {
+    font-size: 24px;
+    color: #026181;
+    margin-bottom: 40px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.stat-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #026181;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 18px;
+    color: #026181;
+}
+
+/* Startups Section Styles */
+.startups {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #263149;
+    border-radius: 20px;
+    margin: 40px;
+    z-index: 1; /* Above particles */
+}
+
+.startups h2 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.startups-description {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carousel {
+    display: flex;
+    gap: 30px;
+    width: calc(280px * 12 + 30px * 11);
+    animation: scroll 40s linear infinite;
+}
+
+.startup-card {
+    flex-shrink: 0;
+    width: 280px;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #026181, #09BBF9);
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.startup-card:hover {
+    transform: rotate(2deg) scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.startup-card .icon {
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    color: #026181;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 auto 15px;
+}
+
+.startup-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.startup-card p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.startup-card button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.startup-card button:hover {
+    color: #e6f0fa;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-280px * 6 - 30px * 5)); }
 }
