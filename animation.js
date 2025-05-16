@@ -49,12 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Particle animation
     function createParticles() {
         const container = document.getElementById('particles-container');
-        const particleCount = 10; // Reduced number of particles
+        const particleCount = 3; 
         const colors = [
-            'hsl(0, 0%, 100%)', // White
-            'hsl(0, 0%, 90%)', // Light grey
-            'hsl(0, 0%, 80%)', // Medium grey
-            'hsl(0, 0%, 70%)'  // Darker grey
+            'hsl(0, 0%, 100%)', 
+            'hsl(0, 0%, 90%)', 
+            'hsl(0, 0%, 80%)', 
+            'hsl(0, 0%, 70%)'  
         ];
 
         function spawnParticle() {
