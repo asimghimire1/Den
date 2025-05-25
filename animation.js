@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Particle animation
     function createParticles() {
         const container = document.getElementById('particles-container');
-        const particleCount = 3; 
+        const particleCount = 1; 
         const colors = [
             'hsl(0, 0%, 100%)', 
             'hsl(0, 0%, 90%)', 
@@ -87,3 +87,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize particles
     createParticles();
 });
+
+
+// VIDEO SECTION HAI
+
+  const thumbnail = document.getElementById("thumbnail");
+  const video = document.getElementById("video");
+
+  thumbnail.addEventListener("click", function () {
+    thumbnail.style.display = "none"; // hide thumbnail
+    video.style.display = "block";    // show video
+    video.play().catch((error) => {
+      console.error("Video play failed:", error);
+    });
+  });
+
+
+
+
