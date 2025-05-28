@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zero Inn</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="text-gray-800">
@@ -44,7 +47,7 @@
 
     <section class="impact">
         <h2>Our Impact in Numbers</h2>
-        <p class="impact-description">Connecting innovative startups with visionary investors to create meaningful impact.</p>
+        <p class="impact-description">Connecting innovative entrepreneurs and startups with visionary investors to create meaningful impact.</p>
         <div class="stats">
             <div class="stat-card">
                 <span class="stat-number" data-target="10987">0</span>
@@ -70,7 +73,7 @@
                 <div class="startup-card">
                     <div class="icon">
                         <i class="fas fa-credit-card"></i>
-                        <h3>FinTech</h3>
+                        <h3>FinTech </h3>
                     </div>
                     <p>Solutions for payments, investments, and banking.</p>
                     <button>Explore ></button>
@@ -269,12 +272,102 @@
     </section>
 
 
+     <section class="twosections">
+     <section class="trustees">
+        <div class="trustees_desc">
+            <span class="short_line"></span>
+            <p>Trusted by 25,000 founders, VC funds, and corporates</p>
+            <span class="short_line"></span>
+        </div>
+        <div class="trustees_img">
+            <img src="trusted_companies.png" alt="trusted companies logo">
+        </div>
+    </section>
+
+
+    <section class="step_body">
+        <div class="header">
+            <h1>WHAT DOES ZERO LOOK LIKE? </h1>
+            <p>A Simple Process to connect startup with the right Investors</p>
+        </div>
+    <div class="container fade-overlay">
+        <div class="steps">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>STEP 1:</p>
+                            <h2>DISCOVER & JOIN</h2>
+                            <img src="icons-steps-01.png" alt="step1 icons" width="100px">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><b>For Startups:</b> Create a profile showcasing your ideas, team, and vision.</p>
+                            <p><b>For Investors:</b> Set up your preferences to find startups aligned with your interests.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>STEP 2:</p>
+                            <h2>SHARE & EXPLORE</h2>
+                            <img src="icons-steps-02.png" alt="step1 icons" width="100px">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><b>For Startups:</b> Post updates about your progress, challenges, and achievements to attract interest.</p>
+                            <p><b>For Investors:</b> Browse startup ideas, review pitches, and engage with entrepreneurs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>STEP 3:</p>
+                            <h2>CONNECT & ENGAGE</h2>
+                            <img src="icons-steps-03.png" alt="step1 icons" width="100px">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><b>For Startups:</b> Start conversations with potential investors, respond to comments, and build meaningful relationships.</p>
+                            <p><b>For Investors:</b> Provide constructive feedback, network with founders, and discover hidden opportunities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>STEP 4:</p>
+                            <h2>COLLAB & GROW</h2>
+                            <img src="icons-steps-04.png" alt="step1 icons" width="100px">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><b>For Startups:</b> Apply for funding by sending your profile and business plans directly to interested investors.</p>
+                            <p><b>For Investors:</b> Use tools to evaluate startups, track progress, and facilitate partnerships.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <p>STEP 5:</p>
+                            <h2>ACHIEVE & SCALE</h2>
+                            <img src="icons-steps-05.png" alt="step1 icons" width="100px">
+                    </div>
+                    <div class="flip-card-back">
+                        <p><b>For Startups:</b> Utilize resources to scale your business, implement investor recommendations, and measure success.</p>
+                            <p><b>For Investors:</b> Monitor ROI, mentor startups, and contribute to their long-term growth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</section>
+
+
     <div class="video-main-container">
   <div class="video-text-container">
     <h3>How It Works</h3>
     <h1>Build and start <br>go Zero to One</h1>
-    <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-    <button class="video-signup-button">Signup Now</button>
+
   </div>
   <div class="video-section-container">
     <div class="video-thumbnail" id="thumbnail">
@@ -287,20 +380,12 @@
     </video>
   </div>
 </div>
+<span class="video_divider">
 
 
-    <section class="trustees">
-        <div class="trustees_desc">
-            <span class="short_line"></span>
-            <p>Trusted by 25,000 founders, VC funds, and corporates</p>
-            <span class="short_line"></span>
-        </div>
-        <div class="trustees_img">
-            <img src="trusted_companies.png" alt="trusted companies logo">
-        </div>
-    </section>
+   
 
-   <section class="testimonials_section">
+  <section class="testimonials_section">
     <div class="testimonials">
         <h2>Testimonials</h2>
         <p>Hear first hand from our incredible community</p>
@@ -311,7 +396,7 @@
                     <p class="whitep">Zero transformed our startup’s journey by connecting us with investors at the perfect time. Their platform streamlined our pitch process, allowing us to focus on scaling our business effectively.</p>
                     <hr>
                     <div class="author">
-                        <img src="aarav_s.png" alt="Aarav S">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Aarav S">
                         <span>Aarav S, Startup Founder</span>
                     </div>
                 </div>
@@ -320,7 +405,7 @@
                     <p class="bluep">Zero’s platform offers a wealth of startup profiles for investors to explore. The detailed insights and intuitive design made it easy for me to find promising opportunities on my own.</p>
                     <hr>
                     <div class="author">
-                        <img src="rahul_k.png" alt="Rahul K">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Rahul K">
                         <span>Rahul K, Investor</span>
                     </div>
                 </div>
@@ -329,7 +414,7 @@
                     <p class="whitep">Thanks to Zero, we secured funding faster than we ever expected. Their team provided expert guidance, ensuring our pitch was polished and ready for top-tier investors.</p>
                     <hr>
                     <div class="author">
-                        <img src="anjali_r.png" alt="Anjali R">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Anjali R">
                         <span>Anjali R, Startup Founder</span>
                     </div>
                 </div>
@@ -338,7 +423,7 @@
                     <p class="bluep">Zero’s platform gave me access to a diverse range of startups to evaluate independently. The comprehensive data and user-friendly interface made my investment decisions more confident.</p>
                     <hr>
                     <div class="author">
-                        <img src="sanya_m.png" alt="Sanya M">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Sanya M">
                         <span>Sanya M, Angel Investor</span>
                     </div>
                 </div>
@@ -347,7 +432,7 @@
                     <p class="whitep">Zero’s platform gave our startup the visibility we needed to attract serious investors. The tools and support provided made the fundraising process seamless and efficient.</p>
                     <hr>
                     <div class="author">
-                        <img src="kiran_b.png" alt="Kiran B">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Kiran B">
                         <span>Kiran B, Tech Entrepreneur</span>
                     </div>
                 </div>
@@ -356,7 +441,7 @@
                     <p class="bluep">As a venture capitalist, I appreciate Zero’s extensive startup database. Browsing and analyzing opportunities on my own has been made effortless with their robust platform.</p>
                     <hr>
                     <div class="author">
-                        <img src="neha_p.png" alt="Neha P">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Neha P">
                         <span>Neha P, Venture Capitalist</span>
                     </div>
                 </div>
@@ -365,7 +450,7 @@
                     <p class="whitep">Zero provided our company with unparalleled exposure to attract top investors. Their support team offered personalized advice that was crucial for our successful funding round.</p>
                     <hr>
                     <div class="author">
-                        <img src="arjun_t.png" alt="Arjun T">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Arjun T">
                         <span>Arjun T, Entrepreneur</span>
                     </div>
                 </div>
@@ -374,7 +459,7 @@
                     <p class="bluep">Zero’s platform is a goldmine for investors seeking high-potential startups. The detailed profiles and analytics allowed me to explore and select opportunities that fit my strategy.</p>
                     <hr>
                     <div class="author">
-                        <img src="priya_d.png" alt="Priya D">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Priya D">
                         <span>Priya D, Private Equity Manager</span>
                     </div>
                 </div>
@@ -383,7 +468,7 @@
                     <p class="whitep">Zero’s resources and investor network gave us the edge to stand out in a crowded market. We closed our funding round quickly, thanks to their comprehensive platform.</p>
                     <hr>
                     <div class="author">
-                        <img src="rohan_g.png" alt="Rohan G">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Rohan G">
                         <span>Rohan G, Startup Co-Founder</span>
                     </div>
                 </div>
@@ -392,7 +477,7 @@
                     <p class="bluep">Zero’s support team was exceptional, guiding us through the fundraising process with expertise. Their platform made it easy for investors to discover our startup on their own.</p>
                     <hr>
                     <div class="author">
-                        <img src="vikram_s.png" alt="Vikram S">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Vikram S">
                         <span>Vikram S, CEO</span>
                     </div>
                 </div>
@@ -401,7 +486,7 @@
                     <p class="whitep">Zero’s platform helped us refine our pitch and gain visibility among investors. Their tools and guidance were instrumental in securing funding for our startup.</p>
                     <hr>
                     <div class="author">
-                        <img src="meera_l.png" alt="Meera L">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Meera L">
                         <span>Meera L, Startup Founder</span>
                     </div>
                 </div>
@@ -410,7 +495,7 @@
                     <p class="bluep">Zero’s platform provides investors with a wealth of startup data to explore independently. The thorough profiles and analytics have streamlined my investment process.</p>
                     <hr>
                     <div class="author">
-                        <img src="aditya_n.png" alt="Aditya N">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Aditya N">
                         <span>Aditya N, Investment Analyst</span>
                     </div>
                 </div>
@@ -419,7 +504,7 @@
                     <p class="whitep">Zero empowered our team to showcase our startup to a global investor audience. Their platform’s reach and resources helped us secure funding faster than anticipated.</p>
                     <hr>
                     <div class="author">
-                        <img src="sneha_v.png" alt="Sneha V">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Sneha V">
                         <span>Sneha V, Startup Founder</span>
                     </div>
                 </div>
@@ -428,7 +513,7 @@
                     <p class="bluep">Zero’s platform offers investors a seamless way to discover startups. The detailed insights and user-friendly interface made it simple for me to find promising opportunities.</p>
                     <hr>
                     <div class="author">
-                        <img src="manish_c.png" alt="Manish C">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Manish C">
                         <span>Manish C, Venture Partner</span>
                     </div>
                 </div>
@@ -437,7 +522,7 @@
                     <p class="whitep">Zero’s platform provided the tools to present our startup professionally, attracting investors who shared our vision. Their support made fundraising smooth and efficient.</p>
                     <hr>
                     <div class="author">
-                        <img src="tara_k.png" alt="Tara K">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Tara K">
                         <span>Tara K, Entrepreneur</span>
                     </div>
                 </div>
@@ -446,7 +531,7 @@
                     <p class="bluep">Zero’s extensive startup database allowed me to find the perfect investment opportunity. The platform’s analytics and ease of use are unmatched for investors.</p>
                     <hr>
                     <div class="author">
-                        <img src="rakesh_j.png" alt="Rakesh J">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Rakesh J">
                         <span>Rakesh J, Angel Investor</span>
                     </div>
                 </div>
@@ -455,7 +540,7 @@
                     <p class="whitep">Zero’s platform gave us the visibility to attract high-caliber investors. Their resources helped us craft a compelling pitch that led to a successful funding round.</p>
                     <hr>
                     <div class="author">
-                        <img src="nisha_m.png" alt="Nisha M">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Nisha M">
                         <span>Nisha M, Startup Founder</span>
                     </div>
                 </div>
@@ -464,7 +549,7 @@
                     <p class="bluep">Zero’s platform makes it easy for investors to explore and evaluate startups independently. The detailed data and intuitive design have enhanced my investment strategy.</p>
                     <hr>
                     <div class="author">
-                        <img src="siddharth_p.png" alt="Siddharth P">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Siddharth P">
                         <span>Siddharth P, Investment Consultant</span>
                     </div>
                 </div>
@@ -473,7 +558,7 @@
                     <p class="whitep">Zero’s support team was instrumental in helping us navigate fundraising complexities. Their platform ensured our startup was visible to the right investors.</p>
                     <hr>
                     <div class="author">
-                        <img src="divya_r.png" alt="Divya R">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Divya R">
                         <span>Divya R, CEO</span>
                     </div>
                 </div>
@@ -482,7 +567,7 @@
                     <p class="bluep">Zero’s platform is a treasure trove for investors seeking innovative startups. The comprehensive profiles allowed me to find opportunities that aligned with my goals.</p>
                     <hr>
                     <div class="author">
-                        <img src="amit_v.png" alt="Amit V">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Amit V">
                         <span>Amit V, Venture Capitalist</span>
                     </div>
                 </div>
@@ -493,7 +578,7 @@
                     <p class="whitep">Zero’s team provided exceptional guidance, helping us refine our pitch and attract investors. Their platform made the fundraising process feel effortless and rewarding.</p>
                     <hr>
                     <div class="author">
-                        <img src="vikram_s.png" alt="Vikram S">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Vikram S">
                         <span>Vikram S, CEO</span>
                     </div>
                 </div>
@@ -502,7 +587,7 @@
                     <p class="bluep">Zero’s platform allowed me to explore a wide range of startups and find one that perfectly fit my investment goals. The detailed data made my decision-making process seamless.</p>
                     <hr>
                     <div class="author">
-                        <img src="neha_p.png" alt="Neha P">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Neha P">
                         <span>Neha P, Venture Capitalist</span>
                     </div>
                 </div>
@@ -511,7 +596,7 @@
                     <p class="whitep">Zero gave our startup the visibility needed to attract top investors. Their tools helped us present a professional pitch that secured funding quickly.</p>
                     <hr>
                     <div class="author">
-                        <img src="arjun_t.png" alt="Arjun T">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Arjun T">
                         <span>Arjun T, Entrepreneur</span>
                     </div>
                 </div>
@@ -520,7 +605,7 @@
                     <p class="bluep">Zero’s platform offers investors an unparalleled database of startups to explore. The robust analytics and interface made finding opportunities straightforward and effective.</p>
                     <hr>
                     <div class="author">
-                        <img src="ravi_k.png" alt="Ravi K">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Ravi K">
                         <span>Ravi K, Investment Advisor</span>
                     </div>
                 </div>
@@ -529,7 +614,7 @@
                     <p class="whitep">Zero’s platform helped us connect with investors who believed in our vision. Their support team provided invaluable guidance throughout our fundraising journey.</p>
                     <hr>
                     <div class="author">
-                        <img src="pooja_s.png" alt="Pooja S">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Pooja S">
                         <span>Pooja S, Startup Founder</span>
                     </div>
                 </div>
@@ -538,7 +623,7 @@
                     <p class="bluep">Zero’s platform is essential for investors looking to discover high-potential startups. The detailed profiles and analytics made it easy to find opportunities on my own.</p>
                     <hr>
                     <div class="author">
-                        <img src="kunal_m.png" alt="Kunal M">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Kunal M">
                         <span>Kunal M, Angel Investor</span>
                     </div>
                 </div>
@@ -547,7 +632,7 @@
                     <p class="whitep">Zero gave us the exposure needed to attract top-tier investors. Their platform’s tools and support ensured our funding process was smooth and successful.</p>
                     <hr>
                     <div class="author">
-                        <img src="anita_d.png" alt="Anita D">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Anita D">
                         <span>Anita D, Entrepreneur</span>
                     </div>
                 </div>
@@ -556,7 +641,7 @@
                     <p class="bluep">Zero’s platform streamlined my investment process by providing access to a vast startup database. The analytics and interface made finding opportunities efficient.</p>
                     <hr>
                     <div class="author">
-                        <img src="vivek_r.png" alt="Vivek R">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Vivek R">
                         <span>Vivek R, Venture Capitalist</span>
                     </div>
                 </div>
@@ -565,7 +650,7 @@
                     <p class="whitep">Zero’s platform gave us the tools to craft a standout pitch and attract investors. Their support was key to our successful funding round.</p>
                     <hr>
                     <div class="author">
-                        <img src="shalini_t.png" alt="Shalini T">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Shalini T">
                         <span>Shalini T, Startup Founder</span>
                     </div>
                 </div>
@@ -574,7 +659,7 @@
                     <p class="bluep">Zero’s platform provides investors with a robust database to explore startups independently. The detailed insights have made my investment decisions more strategic.</p>
                     <hr>
                     <div class="author">
-                        <img src="harish_b.png" alt="Harish B">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Harish B">
                         <span>Harish B, Investment Manager</span>
                     </div>
                 </div>
@@ -583,7 +668,7 @@
                     <p class="whitep">Zero’s platform helped us navigate the fundraising landscape with ease. Their team’s guidance ensured our startup was visible to the right investors.</p>
                     <hr>
                     <div class="author">
-                        <img src="riya_p.png" alt="Riya P">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Riya P">
                         <span>Riya P, CEO</span>
                     </div>
                 </div>
@@ -592,7 +677,7 @@
                     <p class="bluep">Zero’s platform offers investors a seamless way to discover startups. The comprehensive data and intuitive design made finding opportunities effortless.</p>
                     <hr>
                     <div class="author">
-                        <img src="sanjay_l.png" alt="Sanjay L">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Sanjay L">
                         <span>Sanjay L, Venture Capitalist</span>
                     </div>
                 </div>
@@ -601,7 +686,7 @@
                     <p class="whitep">Zero’s platform provided the visibility and tools to attract investors who shared our passion. Their support made our funding journey smooth and successful.</p>
                     <hr>
                     <div class="author">
-                        <img src="deepak_s.png" alt="Deepak S">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Deepak S">
                         <span>Deepak S, Entrepreneur</span>
                     </div>
                 </div>
@@ -610,7 +695,7 @@
                     <p class="bluep">Zero’s platform made it easy to explore and evaluate startups independently. The advanced analytics and user-friendly interface enhanced my investment process.</p>
                     <hr>
                     <div class="author">
-                        <img src="leena_m.png" alt="Leena M">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Leena M">
                         <span>Leena M, Angel Investor</span>
                     </div>
                 </div>
@@ -619,7 +704,7 @@
                     <p class="whitep">Zero’s platform gave us the edge to attract top investors. Their support team’s expertise made the fundraising process straightforward and rewarding.</p>
                     <hr>
                     <div class="author">
-                        <img src="rajesh_k.png" alt="Rajesh K">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Rajesh K">
                         <span>Rajesh K, Startup Founder</span>
                     </div>
                 </div>
@@ -628,7 +713,7 @@
                     <p class="bluep">Zero’s platform is a treasure trove for investors seeking innovative startups. The detailed profiles allowed me to find opportunities that aligned with my goals.</p>
                     <hr>
                     <div class="author">
-                        <img src="arvind_t.png" alt="Arvind T">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Arvind T">
                         <span>Arvind T, Investment Strategist</span>
                     </div>
                 </div>
@@ -637,7 +722,7 @@
                     <p class="whitep">The exposure we gained through Zero was a game-changer for our startup. Their platform’s tools helped us secure funding faster than we thought possible.</p>
                     <hr>
                     <div class="author">
-                        <img src="suman_r.png" alt="Suman R">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Suman R">
                         <span>Suman R, Entrepreneur</span>
                     </div>
                 </div>
@@ -646,7 +731,7 @@
                     <p class="bluep">Zero’s platform offers unmatched efficiency for investors exploring startups. The comprehensive data and analytics streamlined my investment decision-making.</p>
                     <hr>
                     <div class="author">
-                        <img src="nikhil_v.png" alt="Nikhil V">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Nikhil V">
                         <span>Nikhil V, Venture Capitalist</span>
                     </div>
                 </div>
@@ -655,7 +740,7 @@
                     <p class="whitep">Zero’s platform connected us with investors who were the perfect fit for our startup. Their resources and guidance made our funding round a success.</p>
                     <hr>
                     <div class="author">
-                        <img src="preeti_s.png" alt="Preeti S">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Preeti S">
                         <span>Preeti S, Startup Founder</span>
                     </div>
                 </div>
@@ -664,7 +749,7 @@
                     <p class="bluep">Zero’s platform makes it easy for investors to find high-potential startups. The robust analytics and detailed profiles enhanced my ability to choose opportunities.</p>
                     <hr>
                     <div class="author">
-                        <img src="gaurav_m.png" alt="Gaurav M">
+                        <img src="https://imgs.search.brave.com/WQWFJBhzHDhjKt4N8kc494gkmYdEX2ZZ0Ef7TbgkWyA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQy/MzE4MTM1NS9waG90/by9ub3J3ZWdpYW4t/Zm9yZXN0LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/OFRPUHBGN3owT2Z4/NkUwbTNUTGhlTUU1/bk5vSWlaN3o0bXZk/bV9qN0h3OD0" alt="Gaurav M">
                         <span>Gaurav M, Investment Director</span>
                     </div>
                 </div>
@@ -673,14 +758,82 @@
     </div>
 </section>
 
+
+<div class="faq-container">
+    <div class="faq-content">
+        <div class="faq-left">
+            <h1 class="faq-title">Frequently <br> Asked <br> Questions</h1>
+        </div>
+        <div class="faq-right">
+            <div class="faq-item">
+                <div class="faq-question-toggle">
+                    <span class="faq-question">What is Zero?</span>
+                    <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                    Zero is a platform for entrepreneurs, startup founders, and investors. It’s where innovative startup ideas meet funding. Founders pitch their ventures, and investors discover promising startups to back—building a thriving startup community together.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question-toggle">
+                    <span class="faq-question">Is it free to join Zero?</span>
+                    <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                    Yes, joining Zero is free for startups looking to connect with investors.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question-toggle">
+                    <span class="faq-question">How can I pitch my startup on Zero?</span>
+                    <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                    You can pitch your startup by creating a profile on Zero and submitting your pitch deck through the platform.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question-toggle">
+                    <span class="faq-question">How do investors find startups to invest in?</span>
+                    <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                    Investors can browse startup profiles on Zero, filter by industry, and reach out to founders directly.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question-toggle">
+                    <span class="faq-question">Is Zero involved in the investment process?</span>
+                    <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                    Zero facilitates connections but is not directly involved in the investment process or negotiations.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question-toggle">
+                    <span class="faq-question">Can I get feedback on my idea without pitching for funding?</span>
+                    <span class="faq-toggle"></span>
+                </div>
+                <div class="faq-answer">
+                    Yes, Zero offers feedback options through its community features, allowing you to get insights from experts.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
     <section class="footer-section">
         <div class="footer-top">
             <!-- <div class="footer-curve"></div> -->
             <div class="footer-content">
                 <h1>Ready to build your <br>Dream with Zero?</h1>
                 <div class="footer-buttons">
-                    <button class="join-investor">Join as an Investor</button>
-                    <button class="join-entrepreneur">Join as an Entrepreneur</button>
+                    <div class="button-group">
+                         <button class="join-investor">Join as Investor</button>
+                         <button class="join-entrepreneur">Join as Entrepreneur</button>
+                        </div>
                 </div>
             </div>
         </div>
@@ -721,11 +874,41 @@
                 <a href="#">Terms & Conditions</a>
                 <a href="#">Privacy Policy</a>
             </div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+            <!-- social icon hai --> 
+<div class="button-container">
+  <!-- Instagram -->
+  <button class="button flex-center" aria-label="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"  class="btn-svg" viewBox="0 0 16 16" fill="#fff">
+       
+
+      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+    </svg>
+  </button>
+
+  <!-- X (formerly Twitter) -->
+  <button class="button flex-center">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"  class="btn-svg" viewBox="0 0 16 16" fill="#fff">
+      <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+    </svg>
+  </button>
+
+
+  <!-- GitHub -->
+  <button class="button flex-center" aria-label="GitHub">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22px" class="btn-svg" fill="#fff">
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.599.111.793-.26.793-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.084-.729.084-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.107-.775.418-1.305.762-1.605-2.665-.303-5.467-1.333-5.467-5.933 0-1.31.469-2.382 1.235-3.222-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.49 11.49 0 0 1 6 0c2.292-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.873.118 3.176.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.628-5.48 5.922.43.37.823 1.102.823 2.222 0 1.604-.015 2.898-.015 3.292 0 .319.192.694.801.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+    </svg>
+  </button>
+
+  <!-- YouTube -->
+  <button class="button flex-center" aria-label="YouTube">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="22px" class="btn-svg" fill="#fff">
+      <path d="M549.655 124.083c-6.281-23.65-24.806-42.275-48.453-48.586C457.109 64 288 64 288 64s-169.109 0-213.202 11.497c-23.647 6.311-42.172 24.936-48.453 48.586C16 168.388 16 256 16 256s0 87.612 10.345 131.917c6.281 23.65 24.806 42.275 48.453 48.586C118.891 448 288 448 288 448s169.109 0 213.202-11.497c23.647-6.311 42.172-24.936 48.453-48.586C560 343.612 560 256 560 256s0-87.612-10.345-131.917zM232 336V176l142 80-142 80z"/>
+    </svg>
+  </button>
+</div>
+
+
         </div>
     </section>
 

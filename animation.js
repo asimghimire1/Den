@@ -103,5 +103,49 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+const buttonGroup = document.querySelector('.button-group');
+const investorButton = document.querySelector('.join-investor');
+const entrepreneurButton = document.querySelector('.join-entrepreneur');
+
+[investorButton, entrepreneurButton].forEach(button => {
+  button.addEventListener('mouseenter', () => {
+    buttonGroup.classList.add('group-hover');
+  });
+  button.addEventListener('mouseleave', () => {
+    buttonGroup.classList.remove('group-hover');
+  });
+});
+
+// JavaScript to toggle FAQ answers
+        document.querySelectorAll('.faq-question-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const parentItem = toggle.parentNode;
+        parentItem.classList.toggle('active');
+    });
+});
 
 
+
+
+
+
+// slider step
+
+
+$(function() {
+    let images = gsap.utils.toArray(".flip-card");
+  
+    gsap.to(images, {
+      xPercent: -100 * (images.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".twosections",
+        // pinSpacing: false,
+        pin: true,
+        scrub: 1,
+      //   snap: 1 / (images.length - 1),
+        end: () => "+=" + document.querySelector(".flip-card-inner").offsetWidth + 4
+      }
+    });
+  
+  });
