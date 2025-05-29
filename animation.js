@@ -103,18 +103,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-const buttonGroup = document.querySelector('.button-group');
-const investorButton = document.querySelector('.join-investor');
-const entrepreneurButton = document.querySelector('.join-entrepreneur');
+// const buttonGroup = document.querySelector('.button-group');
+// const investorButton = document.querySelector('.join-investor');
+// const entrepreneurButton = document.querySelector('.join-entrepreneur');
 
-[investorButton, entrepreneurButton].forEach(button => {
-  button.addEventListener('mouseenter', () => {
-    buttonGroup.classList.add('group-hover');
-  });
-  button.addEventListener('mouseleave', () => {
-    buttonGroup.classList.remove('group-hover');
-  });
-});
+// [investorButton, entrepreneurButton].forEach(button => {
+//   button.addEventListener('mouseenter', () => {
+//     buttonGroup.classList.add('group-hover');
+//   });
+//   button.addEventListener('mouseleave', () => {
+//     buttonGroup.classList.remove('group-hover');
+//   });
+// });
 
 // JavaScript to toggle FAQ answers
         document.querySelectorAll('.faq-question-toggle').forEach(toggle => {
@@ -124,7 +124,19 @@ const entrepreneurButton = document.querySelector('.join-entrepreneur');
     });
 });
 
+const button_investor = document.getElementsByClassName('join-investor')[0];
+const button_entrepreneur = document.getElementsByClassName('join-entrepreneur')[0];
 
+// Add event listeners
+button_entrepreneur.addEventListener('mouseenter', () => {
+  button_investor.style.backgroundColor = '#E5EDF5';
+    button_investor.style.color = '#026181'; // Change color on hover
+});
+
+button_entrepreneur.addEventListener('mouseleave', () => {
+  button_investor.style.backgroundColor = '';
+    button_investor.style.color = ''; // Revert color when hover ends
+});
 
 
 
@@ -144,8 +156,7 @@ $(function() {
         pin: true,
         scrub: 1,
       //   snap: 1 / (images.length - 1),
-        end: () => "+=" + document.querySelector(".flip-card-inner").offsetWidth + 4
-      }
+        end: () => "+=" + document.querySelector(".flip-card-inner").offsetWidth   }
     });
   
   });

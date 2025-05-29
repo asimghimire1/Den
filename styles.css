@@ -1086,8 +1086,8 @@ nav button {
 }
 
 .join-investor:hover {
- color: #026181;
- background-color: #E5EDF5;
+ color: #d8e2ee;
+ background-color: #026181;
  box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
 }
 
@@ -1099,8 +1099,7 @@ nav button {
 
 .join-entrepreneur {
  display: flex;
-  cursor: pointer;
-
+ cursor: pointer;
  align-items: center;
  justify-content: center;
  gap: 10px;
@@ -1131,7 +1130,7 @@ nav button {
  box-shadow: none;
 }
 
-.button-group.group-hover .join-investor:hover,
+/* .button-group.group-hover .join-investor:hover,
 .button-group.group-hover .join-investor {
   color: #026181;
   background-color: #E5EDF5;
@@ -1143,9 +1142,9 @@ nav button {
   color: #d8e2ee;
   background-color: #026181;
   box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
-}
+} */
 
-.button-group .join-investor:active,
+/* .button-group .join-investor:active,
 .button-group.group-hover .join-investor:active {
   box-shadow: none;
 }
@@ -1153,7 +1152,7 @@ nav button {
 .button-group .join-entrepreneur:active,
 .button-group.group-hover .join-entrepreneur:active {
   box-shadow: none;
-}
+} */
 
 
 .footer-bottom {
