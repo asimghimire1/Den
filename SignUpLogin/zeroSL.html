@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero</title>
+    <link rel="stylesheet" href="zeroSL.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box login">
+            <form action="#">
+                <a href="#" class="btn-shine">Login</a>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button type="button" id="login-toggle-btn">Show</button>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <form action="#">
+                <a href="#" class="btn-shine">SignUp</a>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" placeholder="Email" required>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                    <button type="button" id="signup-toggle-btn">Show</button>
+                </div>
+                <button type="submit" class="btn">SignUp</button>
+            </form>
+        </div>
+
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <img id="wolf-img-left" alt="Wolf" />
+                <h2>Hello, Welcome!</h2>
+                <p>Don't have an account?</p>
+                <button class="btn register-btn">SignUp</button>
+            </div>
+
+            <div class="toggle-panel toggle-right">
+                <img id="wolf-img-right" alt="Wolf" />
+                <h2>Welcome Back!</h2>
+                <p>Already have an account?</p>
+                <button class="btn login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginPasswordInput = document.querySelector("#login-password");
+        const loginToggleBtn = document.querySelector("#login-toggle-btn");
+        const wolfImgLeft = document.getElementById("wolf-img-left");
+        const wolfImgRight = document.getElementById("wolf-img-right");
+        const form = document.querySelector(".container");
+        const registerBtn = document.querySelector('.register-btn');
+        const loginBtn = document.querySelector('.login-btn');
+        const signupPasswordInput = document.querySelector("#signup-password");
+        const signupToggleBtn = document.querySelector("#signup-toggle-btn");
+        const container = document.querySelector('.container');
+
+        const setImageLeft = (src) => {
+            if (!wolfImgLeft.src.includes(src)) {
+                wolfImgLeft.style.opacity = 0;
+                setTimeout(() => {
+                    wolfImgLeft.src = src;
+                    wolfImgLeft.style.opacity = 1;
+                }, 200);
+            }
+        };
+
+        const setImageRight = (src) => {
+            if (!wolfImgRight.src.includes(src)) {
+                wolfImgRight.style.opacity = 0;
+                setTimeout(() => {
+                    wolfImgRight.src = src;
+                    wolfImgRight.style.opacity = 1;
+                }, 200);
+            }
+        };
+
+        // On page load
+        setImageLeft("Images/Wolfu1.png");
+        setImageRight("Images/Wolfu1.png");
+
+        // Focus on password field
+        loginPasswordInput.addEventListener("focus", () => {
+            if (loginPasswordInput.type === "password") {
+                setImageLeft("Images/Wolfu2.png");
+            } else {
+                setImageLeft("Images/Wolfu3.png");
+            }
+        });
+
+        signupPasswordInput.addEventListener("focus", () => {
+            if (signupPasswordInput.type === "password") {
+                setImageRight("Images/Wolfu2.png");
+            } else {
+                setImageRight("Images/Wolfu3.png");
+            }
+        });
+
+        loginToggleBtn.addEventListener("click", () => {
+            if (loginPasswordInput.type === "password") {
+                loginPasswordInput.type = "text";
+                loginToggleBtn.textContent = "Hide";
+                setImageRight("Images/Wolfu3.png");
+            } else {
+                loginPasswordInput.type = "password";
+                loginToggleBtn.textContent = "Show";
+                setImageRight("Images/Wolfu2.png");
+            }
+            loginPasswordInput.focus();
+        });
+
+        signupToggleBtn.addEventListener("click", () => {
+            if (signupPasswordInput.type === "password") {
+                signupPasswordInput.type = "text";
+                signupToggleBtn.textContent = "Hide";
+                setImageLeft("Images/Wolfu3.png");
+            } else {
+                signupPasswordInput.type = "password";
+                signupToggleBtn.textContent = "Show";
+                setImageLeft("Images/Wolfu2.png");
+            }
+            signupPasswordInput.focus();
+        });
+
+        // Reset image and password visibility if clicking outside
+        form.addEventListener("click", (e) => {
+            if (
+                e.target !== loginPasswordInput &&
+                e.target !== loginToggleBtn &&
+                e.target !== loginBtn &&
+                e.target !== registerBtn &&
+                e.target !== signupPasswordInput &&
+                e.target !== signupToggleBtn
+            ) {
+                if (loginPasswordInput.type === "text") {
+                    loginPasswordInput.type = "password";
+                    loginToggleBtn.textContent = "Show";
+                }
+                if (signupPasswordInput.type === "text") {
+                    signupPasswordInput.type = "password";
+                    signupToggleBtn.textContent = "Show";
+                }
+                setImageLeft("Images/Wolfu1.png");
+                setImageRight("Images/Wolfu1.png");
+            }
+        });
+
+        // Toggle .active class
+        
+
+        registerBtn.addEventListener('click', () => {
+            container.classList.add('active');
+        })
+
+        loginBtn.addEventListener('click', () => {
+            container.classList.remove('active');
+        });
+
+
+
+// Immediately set form state based on URL hash, without animation
+if (window.location.hash === '#signup') {
+    container.classList.add('active');
+} else {
+    container.classList.remove('active');
+}
+
+// Then re-enable transitions after a tiny delay
+setTimeout(() => {
+    container.style.transition = '';
+}, 50);
+
+    </script>
+</body>
+</html>
