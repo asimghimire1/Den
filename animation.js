@@ -84,22 +84,87 @@ document.addEventListener('DOMContentLoaded', () => {
     // slider step
 
 
-$(function() {
-    let images = gsap.utils.toArray(".flip-card");
+// $(function() {
+//     gsap.registerPlugin(ScrollTrigger);
+//     let images = gsap.utils.toArray(".flip-card");
   
-    gsap.to(images, {
-      xPercent: -100 * (images.length - 1.7),
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".twosections",
-        // pinSpacing: false,
-        pin: true,
-        scrub: 1,
-      //   snap: 1 / (images.length - 1),
-        end: () => "+=" + document.querySelector(".flip-card-inner").offsetWidth}
-});
-});
+//     gsap.to(images, {
+//       xPercent: -100 * (images.length - 1.7),
+//       ease: "none",
+//       scrollTrigger: {
+//         trigger: ".twosections",
+//         // pinSpacing: false,
+//         pin: true,
+//         scrub: 1,
+//       //   snap: 1 / (images.length - 1),
+//         end: () => "+=" + document.querySelector(".flip-card-inner").offsetWidth}
+// });
+// });
 
+$(function() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const images = gsap.utils.toArray(".flip-card");
+    const dots = document.querySelectorAll('.dot');
+    const totalSteps = images.length;
+
+    // GSAP animation for scrolling (original)
+    const tl = gsap.to(images, {
+        xPercent: -100 * (images.length - 1.7),
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".twosections",
+            pin: true,
+            scrub: 1,
+            // snap: 1 / (images.length - 1),
+            end: () => "+=" + document.querySelector(".flip-card-inner").offsetWidth,
+            onUpdate: (self) => {
+                // Calculate which step is in the center based on scroll progress
+                const progress = self.progress;
+                const stepWidth = 1 / (totalSteps - 1);
+                const activeStepIndex = Math.min(
+                    Math.round(progress / stepWidth),
+                    totalSteps - 1
+                );
+
+                // Update active dot
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[activeStepIndex].classList.add('active');
+            }
+        }
+    });
+
+    // Click handler for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            // Ensure ScrollTrigger is initialized
+            if (tl.scrollTrigger) {
+                const progress = index / (totalSteps - 1);
+                const scrollPosition = tl.scrollTrigger.start + (tl.scrollTrigger.end - tl.scrollTrigger.start) * progress;
+                
+                // Check if GSAP ScrollTo plugin is available
+                if (gsap.plugins.scrollTo) {
+                    gsap.to(window, {
+                        scrollTo: { y: scrollPosition, autoKill: false },
+                        duration: 0.5,
+                        ease: "power1.out",
+                        onComplete: () => {
+                            ScrollTrigger.refresh();
+                        }
+                    });
+                } else {
+                    // Fallback to native window.scrollTo
+                    window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
+    // Ensure ScrollTrigger refreshes on resize
+    window.addEventListener('resize', () => {
+        ScrollTrigger.refresh();
+    });
+});
     
 
     // Reload and Scroll to Top
