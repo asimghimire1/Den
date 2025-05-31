@@ -444,6 +444,8 @@ nav button {
     display: flex;
     flex-direction: column;
     margin-top: -1px;
+    padding-bottom: 5px;
+    /* border: 2px solid red; */
 }
 
 .startups h2 {
@@ -729,8 +731,9 @@ nav button {
     align-items: center;
     background-color: #fff;
     color: #09b9f9e1;
-    height: 36%;
+    height: 25%;
     margin-top: -1px;
+    padding-top: 60px;
     /* border: 2px solid red; */
 }
 
@@ -792,7 +795,7 @@ nav button {
 
 .step_body { 
     /* background: linear-gradient(to bottom, #ffffff 60%, #F0F7FF 100%); */
-    background: url(faq_grid.jpg) center;
+    background: url(Images/faq_grid.jpg) center;
     color: white;
     display: flex;
     justify-content: center;
@@ -802,7 +805,7 @@ nav button {
     flex-direction: column;
     height: auto;
     padding: 0px 0px 0px 0px;
-    margin-top: -30px;
+    /* margin-top: -30px; */
     /* border: 2px solid red; */
     
 }
@@ -996,7 +999,7 @@ nav button {
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 200px;
+            width: 100px;
             z-index: 1;
             background: linear-gradient(to right, #ffffff 20%, transparent);        }
 
@@ -1013,14 +1016,15 @@ nav button {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin-top: 20px;
-            padding-bottom: 20px;
+            /* margin-top: 20px; */
+            /* padding-bottom: 20px; */
         }
 
         .dot {
             width: 12px;
             height: 12px;
-            background-color: #026181;
+            /* background-color: #1a3c5e; */
+            border: 2px solid #1a3c5e;
             border-radius: 50%;
             display: inline-block;
             transition: all 0.3s ease;
@@ -1029,8 +1033,8 @@ nav button {
         }
 
         .dot.active {
-            width: 40px;
-            height: 12px;
+            /* width: 40px;
+            height: 12px; */
             background-color: #1a3c5e;
             border-radius: 6px;
         }
@@ -1040,6 +1044,7 @@ nav button {
 .video-testimonials {
     background: linear-gradient(to bottom, #FFFFFF 30%, #F0F7FF 100%);
 
+    /* border: 2px solid red; */
 }
 
 /* Testimonials Section Styles */

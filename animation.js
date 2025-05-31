@@ -84,88 +84,101 @@ document.addEventListener('DOMContentLoaded', () => {
     // slider step
 
 
-// $(function() {
-//     gsap.registerPlugin(ScrollTrigger);
-//     let images = gsap.utils.toArray(".flip-card");
-  
-//     gsap.to(images, {
-//       xPercent: -100 * (images.length - 1.7),
-//       ease: "none",
-//       scrollTrigger: {
-//         trigger: ".twosections",
-//         // pinSpacing: false,
-//         pin: true,
-//         scrub: 1,
-//       //   snap: 1 / (images.length - 1),
-//         end: () => "+=" + document.querySelector(".flip-card-inner").offsetWidth}
-// });
-// });
-
 $(function() {
     gsap.registerPlugin(ScrollTrigger);
-
+    const delay = 100;
     const images = gsap.utils.toArray(".flip-card");
     const dots = document.querySelectorAll('.dot');
     const totalSteps = images.length;
 
-    // GSAP animation for scrolling (original)
-    const tl = gsap.to(images, {
-        xPercent: -100 * (images.length - 1.7),
-        ease: "none",
+    // 1. Calculate the scroll‐width of all flip‐cards together:
+    const container = document.querySelector(".flip-card-inner");
+    const totalWidth = container.offsetWidth; 
+    // (this is how many pixels we want the cards to slide over)
+
+    // 2. Create a timeline that uses scrollTrigger, pinning .twosections
+    const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".twosections",
             pin: true,
             scrub: 1,
-            // snap: 1 / (images.length - 1),
-            end: () => "+=" + document.querySelector(".flip-card-inner").offsetWidth,
-            onUpdate: (self) => {
-                // Calculate which step is in the center based on scroll progress
-                const progress = self.progress;
+            // TOTAL scroll-distance = 200px (delay) + totalWidth (cards slide)
+            end: "+=" + (delay + totalWidth),
+            onUpdate: self => {
+                // Calculate which card should be “active” based on overall progress
+                const progress = self.progress; 
+                // Because the first 200px do nothing, we measure active-card only once progress > (200 / (200+totalWidth)).
+                // However, rounding by (totalSteps–1) effectively “stretches” the index across the entire timeline,
+                // so it still works if we just do this:
+                // const delay = 200;
+                const full = delay + totalWidth;
+
+                let normalizedProgress = (self.progress * full - delay) / totalWidth;
+                normalizedProgress = Math.max(0, Math.min(1, normalizedProgress)); // Clamp between 0 and 1
+
                 const stepWidth = 1 / (totalSteps - 1);
                 const activeStepIndex = Math.min(
-                    Math.round(progress / stepWidth),
+                    Math.round(normalizedProgress / stepWidth),
                     totalSteps - 1
                 );
-
-                // Update active dot
                 dots.forEach(dot => dot.classList.remove('active'));
                 dots[activeStepIndex].classList.add('active');
             }
         }
     });
 
-    // Click handler for dots
+    // 3. Add a purely “empty” tween of duration: 200 to create the illusion of 200px of scroll-delay
+    tl.to({}, { 
+        duration: delay 
+    });
+
+    // 4. Now add the real horizontal slide, giving it duration = totalWidth
+    tl.to(images, {
+        xPercent: -100 * (images.length - 1.7),
+        ease: "none",
+        duration: totalWidth
+    });
+
+    // 5. Dot‐click logic (jumps along the same timeline)
+    // const delay = 200;
+    const full = delay + totalWidth;
+
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            // Ensure ScrollTrigger is initialized
-            if (tl.scrollTrigger) {
-                const progress = index / (totalSteps - 1);
-                const scrollPosition = tl.scrollTrigger.start + (tl.scrollTrigger.end - tl.scrollTrigger.start) * progress;
-                
-                // Check if GSAP ScrollTo plugin is available
-                if (gsap.plugins.scrollTo) {
-                    gsap.to(window, {
-                        scrollTo: { y: scrollPosition, autoKill: false },
-                        duration: 0.5,
-                        ease: "power1.out",
-                        onComplete: () => {
-                            ScrollTrigger.refresh();
-                        }
-                    });
-                } else {
-                    // Fallback to native window.scrollTo
-                    window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
-                }
+            const triggerST = tl.scrollTrigger;
+            if (!triggerST) return;
+
+            const scrollStart = triggerST.start;
+            const scrollEnd = triggerST.end;
+
+            // Calculate scroll distance excluding delay
+            const scrollDistance = scrollEnd - scrollStart;
+
+            // 🔥 Adjust scroll progress to include the delay at the start
+            const targetProgress = index / (totalSteps - 1);
+            const targetScroll = scrollStart + ((delay + (targetProgress * totalWidth)) / full) * scrollDistance;
+
+            if (gsap.plugins.scrollTo) {
+                gsap.to(window, {
+                    scrollTo: { y: targetScroll, autoKill: false },
+                    duration: 0.5,
+                    ease: "power1.out",
+                    onComplete: () => ScrollTrigger.refresh()
+                });
+            } else {
+                window.scrollTo({ top: targetScroll, behavior: 'smooth' });
             }
         });
     });
 
-    // Ensure ScrollTrigger refreshes on resize
+
+    // 6. Refresh on resize
     window.addEventListener('resize', () => {
         ScrollTrigger.refresh();
     });
 });
-    
+
+
 
     // Reload and Scroll to Top
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
